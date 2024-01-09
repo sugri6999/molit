@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+    파일정의 :초기화 스타일
+	작성날짜 :2019-02-21 지성만
+    분류순서 :Base > Fonts
+    속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+    ## Base
+-------------------------------------------------------------------*/
+html, body, 
+div, ul, ol, dl, li, dd, p,
+h1, h2, h3, h4, h5, h6,
+table, th, td, caption, 
+article, aside, canvas, details, figure, figcaption,
+footer, header, menu, nav, section,
+button, select, textarea, input,
+fieldset, legend, a, span, strong, em, 
+address, dfn, small, i, b {box-sizing:border-box; margin:0; padding:0; border:0; list-style:none; font-family:"NSM", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", "Lato", "Helvetica Neue", "Verdana", sans-serif; font-style:normal; font-weight:normal; font-size:100%}:before,
+:after {box-sizing:border-box}
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section {display:block}
+html {font-size:14px}
+body {-webkit-text-size-adjust:none; -moz-text-size-adjust:none; -ms-text-size-adjust:none}
+hidden,
+.hidden {display:none !important}
+img {vertical-align:middle}
+a {text-decoration:none}
+button {background-color:transparent; cursor:pointer}
+fieldset,
+iframe {width:100%}
+img,
+a,
+frame,
+iframe,
+fieldset {border:0}
+.dv-android [tabindex='0']:focus,
+.dv-android a:focus,
+.dv-android button:focus,
+.dv-android input:focus,
+.dv-android textarea:focus,
+.dv-android select:focus {outline:0}
+.dv-ios [tabindex='0'],
+.dv-ios a,
+.dv-ios button,
+.dv-ios input,
+.dv-ios textarea,
+.dv-ios select {-webkit-tap-highlight-color:transparent}
+table {width:100%; border-spacing:0; border-collapse:collapse}
+caption {visibility:hidden; height:0; line-height:0; font-size:0}
+legend {position:absolute; left:-9999em; top:-9999em}
+
+/*-------------------------------------------------------------------
+    ## Fonts
+-------------------------------------------------------------------*/
+@font-face {
+	font-family:"NSM";
+	font-weight:300;
+	font-style:normal;
+	src:url("../fonts/notokr-medium.eot");
+	src:local("※"), url('../fonts/notokr-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/notokr-medium.woff2') format('woff2'), url('../fonts/notokr-medium.woff') format('woff')
+}
+@font-face {
+	font-family:"NSL";
+	font-style:normal;
+	src:url("../fonts/notokr-light.eot");
+	src:local("※"), url("../fonts/notokr-light.eot?#iefix") format("embedded-opentype"), url('../fonts/notokr-light.woff2') format('woff2'), url("../fonts/notokr-light.woff") format("woff")
+}
+@font-face {
+	font-family:"NSR";
+	font-style:normal;
+	src:url("../fonts/notokr-regular.eot");
+	src:local("※"), url("../fonts/notokr-regular.eot?#iefix") format("embedded-opentype"), url('../fonts/notokr-regular.woff2') format('woff2'), url("../fonts/notokr-regular.woff") format("woff")
+}
+@font-face {
+	font-family:"NSB";
+	font-style:normal;
+	src:url("../fonts/notokr-bold.eot");
+	src:local("※"), url("../fonts/notokr-bold.eot?#iefix") format("embedded-opentype"), url('../fonts/notokr-bold.woff2') format('woff2'), url("../fonts/notokr-bold.woff") format("woff")
+}
