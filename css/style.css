@@ -6,70 +6,86 @@
     분류순서 :기본정책 > 유틸리티 > 사용자정의(컬러, 폰트, 보더, 간격 등)
     속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
 -------------------------------------------------------------------*/
-section.login .sub_wrap .inner {
-  min-height: 520px;
-  position: relative;
+body {
+  min-width: 1280px;
 }
 
-.login_wrap {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 40px 80px;
-  background: #f8f8f8;
-  border: 1px solid #e0e0e0;
+section#container {
+  height: calc(100vh - 236px);
 }
-.login_wrap .login_inner {
+section article .sub_wrap .inner {
+  position: relative;
+  min-height: 520px;
+}
+section article.login .sub_wrap {
+  padding-bottom: 0;
+}
+section article.login .sub_wrap .inner {
+  background: url("../images/sub/login_bg.png") 50px -32px no-repeat;
+  background-size: 660px;
+}
+section article.login .sub_wrap .inner .sub_section .login_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+section article.login .sub_wrap .inner .sub_section .login_area > h3 {
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+section article.login .sub_wrap .inner .sub_section .login_area > h3 span {
+  color: #fd4727;
+}
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap {
+  padding: 60px 130px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.15);
+}
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner {
   position: relative;
   width: 500px;
   margin: auto;
 }
-.login_wrap .login_inner .login_form {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form {
   position: relative;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eaeaea;
 }
-.login_wrap .login_inner .login_form dl {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form dl {
   overflow: hidden;
 }
-.login_wrap .login_inner .login_form dl:first-child {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form dl:first-child {
   margin-bottom: 10px;
 }
-.login_wrap .login_inner .login_form dl dt {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form dl dt {
   float: left;
   font-size: 14px;
   font-weight: bold;
   width: 80px;
   line-height: 36px;
 }
-.login_wrap .login_inner .login_form dl dd {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form dl dd {
   float: left;
 }
-.login_wrap .login_inner .login_form dl dd input {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form dl dd input {
   width: 300px;
-  border: 1px solid #e0e0e0;
   height: 36px;
-  font-size: 14px;
-  padding: 10px;
+  border: 0 none;
+  background-color: #E8F0FE;
 }
-.login_wrap .login_inner .login_form dl dd input::-moz-placeholder {
-  color: #d3d3d3;
-}
-.login_wrap .login_inner .login_form dl dd input::placeholder {
-  color: #d3d3d3;
-}
-.login_wrap .login_inner .login_form .id_check {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form .id_check {
   display: inline-block;
   margin-top: 10px;
   margin-left: 80px;
   font-size: 14px;
   color: #666;
 }
-.login_wrap .login_inner .login_form .id_check input {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form .id_check input {
   margin-right: 10px;
 }
-.login_wrap .login_inner .login_form .login_btn {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_form .login_btn {
   position: absolute;
   right: 0;
   top: 0;
@@ -81,43 +97,43 @@ section.login .sub_wrap .inner {
   background: url("../images/sub/login_btn.gif");
   border-radius: 6px;
 }
-.login_wrap .login_inner .login_util {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_util {
   overflow: hidden;
 }
-.login_wrap .login_inner .login_util ul {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_util ul {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
 }
-.login_wrap .login_inner .login_util ul li a {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_util ul li a {
   font-size: 14px;
   color: #666666;
 }
-.login_wrap .login_inner .login_util ul li button {
-  background-color: #ccc;
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_util ul li button {
+  background-color: #D5ECF1;
   border-radius: 16px;
   height: 32px;
   padding: 0 20px;
 }
-.login_wrap .login_inner .login_notice {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_notice {
   border: 1px solid #e0e0e0;
   padding: 30px 0;
   margin-bottom: 60px;
   background: url("../images/sub/ico_login_notice.png") no-repeat 357px 40px;
 }
-.login_wrap .login_inner .login_notice .login_notice ul {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_notice .login_notice ul {
   margin-left: 390px;
 }
-.login_wrap .login_inner .login_notice .login_notice ul li {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_notice .login_notice ul li {
   position: relative;
   padding-left: 15px;
   font-size: 14px;
   color: #666;
 }
-.login_wrap .login_inner .login_notice .login_notice ul li:first-child {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_notice .login_notice ul li:first-child {
   margin-bottom: 10px;
 }
-.login_wrap .login_inner .login_notice .login_notice ul li:after {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_notice .login_notice ul li:after {
   position: absolute;
   left: 7px;
   top: 8px;
@@ -128,6 +144,72 @@ section.login .sub_wrap .inner {
   background: #666;
   border-radius: 50%;
 }
-.login_wrap .login_inner .login_notice .login_notice ul li span {
+section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_notice .login_notice ul li span {
   color: #eb6100;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap {
+  margin: 40px 0;
+  min-height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 440px;
+  background: url("../images/sub/man_bg.png") right -20px no-repeat;
+  background-size: 180px;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_btn button {
+  max-width: 270px;
+  line-height: normal;
+  min-height: 45px;
+  padding: 0;
+  border-radius: 22px;
+  background-color: #999;
+  color: #fff;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner .cs_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner .cs_info h4 {
+  font-size: 22px;
+  letter-spacing: -0.5px;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner .cs_info h5 {
+  font-size: 32px;
+  color: #ff0000;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner .cs_info p {
+  color: #7f7f7f;
+}
+
+.footer .footer__contents .container {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.footer .footer__contents .container.footer_logo_addr h2 {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 230px;
+}
+.footer .footer__contents .container.footer_logo_addr address {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.footer .footer__contents .container.footer_logo_addr address .footer__copy {
+  padding-top: 0;
 }/*# sourceMappingURL=style.css.map */

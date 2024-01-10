@@ -4,12 +4,10 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="imagetoolbar" content="no" />
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
 <meta name="format-detection" content="telephone=no" />
 <title>기반터</title>
 <link type="text/css" rel="stylesheet" href="../css/import.css" />
 <link type="text/css" rel="stylesheet" href="../css/style.css" />
-<script src="../js/import.js"></script>
 </head>
 <body>
     <header id="header" class="header">
@@ -20,74 +18,90 @@
         </div>
     </header>
 
-    <section class="login">
-        <div class="wrap">
-            <article>
-                <div class="wrap cen">
-                    <!-- 로그인 화면 -->
-                    <div class="sub_wrap">
-                        <div class="inner">
-                            <div class="sub_section">
-                                <p>기반터 시스템은 
-                                    『기반시설관리법』에  따라 운영됩니다.  
-                                     관계자 전용 시스템으로 로그인 후 
-                                     이용하실 수 있습니다....
-                                    </p>
-                                
-                                <div class="login_wrap">
-                                    <div class="login_inner">                                        
-                                        <div class="sub_title">
-                                            <h3>로그인</h3>
-                                        </div>                                        
-                                        <div class="login_form">
-                                            <dl>
-                                                <dt>아이디</dt>
-                                                <dd><label for="inpuserId"></label><input type="text" id="inpuserId" name="userId" value=""></dd>
-                                            </dl>
-                                            <dl>
-                                                <dt>비밀번호</dt>
-                                                <dd><label for="inpuserPswd"></label><input type="password" id="inpuserPswd" name="userPswd" value="" autocomplete="off"></dd>
-                                            </dl>
-                                            <button type="button" class="login_btn" id="btnLogin">로그인</button>
-                                            <label for="idChk" class="id_check"><input type="checkbox" id="idChk">아이디 저장</label>
-                                        </div>                                        
-                                        <div class="login_util">
-                                            <ul>
-                                                <li><button id="btnGetId" type="button" class="btnJoin">아이디 찾기</button></li>
-                                                <li><button id="btnGetPassWord" type="button" class="btnJoin">비밀번호 초기화</button></li>
-                                                <li><button id="btnJoinMember" type="button" class="btnJoin">회원가입</button></li>
-                                            </ul>
-                                        </div>                                      
-                                    </div>
+    <section id="container">
+        <article class="login">
+            <!-- 로그인 화면 -->
+            <div class="sub_wrap">
+                <div class="inner">
+                    <div class="sub_section">
+                        <div class="login_area">
+                            <h3>기반터 시스템은 
+                                <br><span>『기반시설관리법』</span>에  따라 운영됩니다.  
+                                <br><span>관계자 전용</span> 시스템으로 <span>로그인 후</span> 
+                                <br>이용하실 수 있습니다.
+                            </h3>
+                            
+                            <div class="login_wrap">
+                                <div class="login_inner">                                        
+                                    <div class="sub_title">
+                                        <h3>로그인</h3>
+                                    </div>                                        
+                                    <div class="login_form">
+                                        <dl>
+                                            <dt><label for="inpuserId">아이디</label></dt>
+                                            <dd><input type="text"  id="inpuserId" name="userId" value="" class="form-text" /></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>비밀번호</dt>
+                                            <dd><label for="inpuserPswd"></label><input type="password" id="inpuserPswd" name="userPswd" value="" autocomplete="off"></dd>
+                                        </dl>
+                                        <button type="button" class="login_btn" id="btnLogin">로그인</button>
+                                        <span class="form-check id_check">
+                                            <input type="checkbox" id="idChk" />
+                                            <label for="idChk"><span>아이디 저장</span></label>
+                                        </span>
+                                    </div>                                        
+                                    <div class="login_util">
+                                        <ul>
+                                            <li><button id="btnGetId" type="button" class="btnJoin">아이디 찾기</button></li>
+                                            <li><button id="btnGetPassWord" type="button" class="btnJoin">비밀번호 초기화</button></li>
+                                            <li><button id="btnJoinMember" type="button" class="btnJoin">회원가입</button></li>
+                                        </ul>
+                                    </div>                                      
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cs_wrap">
+                            <div class="cs_btn">
+                                <button type="button" class="btn-type1 btn-basic"><span>기반시설관리법 홍보동영상</span></button>
+                                <button type="button" class="btn-type1 btn-basic"><span>회원가입절차안내서 다운로드</span></button>
+                            </div>
+                            <div class="cs_banner">
+                                <p><img src="../images/sub/cs_bg.png" alt="" /></p>
+                                <div class="cs_info">
+                                    <h4>시스템 이용 및 업무관련 문의 통합 콜센터 </h4>
+                                    <h5>1588-8788</h5>
+                                    <p>(연결 후 5번 선택 - 기반시설관리법 관련)
+                                        <br>(문의시간 : 0900~18:00(월~금) 점심시간 : PM12시-13시)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </article>
-        </div>
+            </div>
+        </article>
     </section>
 
     <footer id="footer" class="footer">
         <div class="footer__links">
             <div class="container">
                 <ul class="depth1">
-                    <li class="has-depth1"><a href="javascript:;" data-mmenuid="11" data-smenuid="11">시스템 소개</a></li>
-                    <li class="has-depth1"><a href="javascript:;" data-mmenuid="11" data-smenuid="21">이용약관</a></li>
-                    <li class="has-depth1"><a href="javascript:;" data-mmenuid="11" data-smenuid="31"><span style="font-weight: bold;">개인정보처리방침</span></a></li>
-                    <li class="has-depth1"><a href="javascript:;" data-mmenuid="11" data-smenuid="41">공공데이터 이용정책</a></li>
+                    <li class="has-depth1"><a href="">시스템 소개</a></li>
+                    <li class="has-depth1"><a href="">이용약관</a></li>
+                    <li class="has-depth1"><a href=""><span style="font-weight: bold;">개인정보처리방침</span></a></li>
+                    <li class="has-depth1"><a href="">공공데이터 이용정책</a></li>
                     
                 </ul>
             </div>
         </div>
         <div class="footer__contents">
-            <div class="container">
+            <div class="container footer_logo_addr">
                 <h2 class="footer__logo"><span class="sr_only">국토교통부</span></h2>
-                <div class="footer__addr">
-                       (담당과) 국토교통부 시설안전과 (우)30103 세종특별자치시 도움6로 11 국토교통부<br>
-                    헬프데스크 : 1588-8788 (연결 후 5번 선택 - 기반시설관리법 관련)<br><br>
-                </div>
-                <p class="footer__copy">Copyright © 2020 MOLIT. All Rights Reserved. </p>
+                <address>
+                    <div class="footer__addr">(담당과) 국토교통부 시설안전과 (우)30103 세종특별자치시 도움6로 11 국토교통부</div>
+                    <p class="footer__copy">Copyright © 2020 MOLIT. All Rights Reserved.</p>
+                </address>
             </div>
         </div>
     </footer>

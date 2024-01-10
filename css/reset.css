@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*-------------------------------------------------------------------
     파일정의 :초기화 스타일
-	작성날짜 :2019-02-21 지성만
+	작성날짜 :22024-01-08 지성만
     분류순서 :Base > Fonts
     속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
 -------------------------------------------------------------------*/
@@ -50,6 +50,13 @@ fieldset {border:0}
 .dv-android input:focus,
 .dv-android textarea:focus,
 .dv-android select:focus {outline:0}
+
+a:focus:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {outline:0}
+
 .dv-ios [tabindex='0'],
 .dv-ios a,
 .dv-ios button,
