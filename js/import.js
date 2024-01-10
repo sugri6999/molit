@@ -1,0 +1,15 @@
+var baseURL = '../js/';
+document.write('<script type="text/javascript" src="'+baseURL+'lib/jquery-3.3.1.min.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'lib/EasePack.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'lib/TweenMax.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'device.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'utility.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'common.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'ui.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'custom_ui.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'content.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'slick.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'init.js"></script>');
+document.write('<!--[if lt IE 9]>');
+document.write('<script type="text/javascript" src="'+baseURL+'lib/html5shiv-printshiv.js"></script>');
+document.write('<![endif]-->');
