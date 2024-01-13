@@ -7,11 +7,71 @@
     속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
 -------------------------------------------------------------------*/
 body {
-  min-width: 1280px;
+  min-width: 1340px;
+}
+
+header .header__top .unb_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: #0071C1;
+}
+header .header__top .unb_wrap .unb_body {
+  display: flex;
+  justify-content: space-between;
+  width: 1340px;
+}
+header .header__top .unb_wrap .unb_body a {
+  font-family: "NSR";
+  color: #fff;
+}
+header .header__top .unb_wrap .unb_body .tnb {
+  display: flex;
+}
+header .header__top .unb_wrap .unb_body .tnb a {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 2px 20px 0;
+  background-color: #fff;
+}
+header .header__top .unb_wrap .unb_body .tnb a:nth-child(1) {
+  color: #999;
+}
+header .header__top .unb_wrap .unb_body .tnb a:nth-child(2) {
+  background-color: #7FA8DC;
+}
+header .header__top .unb_wrap .unb_body .tnb a:nth-child(3) {
+  background-color: #6ABFB8;
+}
+header .header__top .unb_wrap .unb_body .tnb a:nth-child(4) {
+  background-color: #999;
+}
+header .header__top .unb_wrap .unb_body .unb {
+  display: flex;
+  gap: 30px;
+}
+header .header__top .unb_wrap .unb_body .unb a {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+header .header__top .gnb_wrap {
+  border-bottom: 0 none;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  height: 80px;
+}
+header .header__top .gnb_wrap .logo {
+  width: 220px;
+  height: 50px;
+  padding-top: 0;
 }
 
 section#container {
-  height: calc(100vh - 236px);
+  height: calc(100vh - 193px);
 }
 section article .sub_wrap .inner {
   position: relative;
