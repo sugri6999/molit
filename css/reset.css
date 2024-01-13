@@ -17,7 +17,8 @@ article, aside, canvas, details, figure, figcaption,
 footer, header, menu, nav, section,
 button, select, textarea, input,
 fieldset, legend, a, span, strong, em, 
-address, dfn, small, i, b {box-sizing:border-box; margin:0; padding:0; border:0; list-style:none; font-family:"NSM", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", "Lato", "Helvetica Neue", "Verdana", sans-serif; font-style:normal; font-weight:normal; font-size:100%}:before,
+address, dfn, small, i, b {box-sizing:border-box; margin:0; padding:0; border:0; list-style:none; font-family:"NSM", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", "Lato", "Helvetica Neue", "Verdana", sans-serif; font-style:normal; font-weight:normal; font-size:100%; color:#191919}
+:before,
 :after {box-sizing:border-box}
 article,
 aside,
@@ -44,6 +45,7 @@ a,
 frame,
 iframe,
 fieldset {border:0}
+img {max-width:100%}
 .dv-android [tabindex='0']:focus,
 .dv-android a:focus,
 .dv-android button:focus,

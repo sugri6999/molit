@@ -342,95 +342,40 @@ var ui = {
 		참고경로 : /html/menu1/page.html
 		(공통여부와 관계없이 확인이 가능한 대표화면 적용)
 	*/
-	popup : {
-		eleModule : '.popup-wrap',
-		eleOpener : '.popup-open',
-		eleCloser : '.popup-close',
-		eleFocus  : '.popup-focus',
-		eleTabIdx : 'a, button, select, input, textarea', //키보드제어 요소
-		clsVisible : 'is-visible',
-		zindex    : 1000,
-		indexNum  : 0,
-		scale	  : 0.8,
-		duration  : 0.6,
-		init : function(){
-			this.event();
-		},
-		event : function(){
+	popup: {
+		eleModule: '.popup-wrap',
+		eleOpener: '.popup-open',
+		eleCloser: '.popup-close',
+		eleFocus: '.popup-focus',
+		zindex: 1000,
+		open: function (id, obj) {
 			var _this = this;
-			//Trigger Open Event
-			$(_this.eleOpener).not('.is-clicked').on('click', function(){
-				var id = $(this).attr('aria-controls');
-				_this.open(id);
-			}).addClass('is-clicked');
-			//Trigger Close Event
-			$(_this.eleCloser).not('.is-clicked').on('click', function(){
-				var id = $(this).attr('aria-controls');
-				_this.close(id);
-			}).addClass('is-clicked');
-			//Kayboard Close Event
-			window.onkeydown = function(){
-				var keycode = event.keyCode;
-				if (keycode == 27 && _this.indexNum > 0){ //모달이 있을때 ESC를 눌른경우
-					var id = $(_this.eleModule + '[data-index='+_this.indexNum+']').attr('id');
-					_this.close(id);
+			var $id = $('#' + id);
+			$(obj).attr({ 'data-popup': id });
+			$id.removeAttr('hidden');
+			setTimeout(function () { $id.addClass('is-active') }, 0);
+			$id.one(transitionend, function () {
+				if ($(this).hasClass('is-active')) {
+					$(this).find(_this.eleFocus).attr('tabindex', '0').focus();
 				}
-			}
+			});
+			dimmer.open($id, 'dimmer-popup');
+			return 'Popup Opened';
 		},
-		open : function(id){
+		close: function (id, callback) {
 			var _this = this;
-			var $eleModule = $('#'+id);
-			_this.indexNum = _this.indexNum + 1;
-			//Popup Open Active
-			$eleModule.addClass(_this.clsVisible).attr('data-index', _this.indexNum).css('z-index', _this.zindex + _this.indexNum); //모듈활성화 + 오픈순서값 + 레이어순서 적용
-			if ($eleModule.outerHeight()%2 == 1){$eleModule.css({height:$eleModule.outerHeight()+1})} //홀수 높이인경우 짝수로변환 (trnaslateY 픽셀깨짐 대응)
-			TweenMax.set($eleModule, {scale:_this.scale, onComplate:function(){ //효과준비
-				TweenMax.to($eleModule, _this.duration, {scale:1, opacity:1, ease:Power4.easeOut, onComplete:function(){ //효과진행
-					_this.keyDisable(_this.indexNum); //보조기기, 키보드 접근성
-					if ($('body').hasClass('dv-ios')){ $eleModule.removeAttr('aria-labelledby')} //IOS를 다른 보조기기에 맞추기
-					$eleModule.attr({'tabindex':'0'}).focus();
-				}});
-			}});
-
-			//Document UI
-			dimmer.open('dimmer-popup', _this.duration); //딤 열기 (배경 가리기)
-			bodyScroll.fixed(); //배경스크롤 고정
-		},
-		close : function(id){
-			var _this = this;
-			var $eleModule = $('#'+id);
-			_this.indexNum = _this.indexNum - 1;
-			//Popup Close Active
-			TweenMax.to($eleModule, _this.duration, {scale:_this.scale, opacity:0, ease:Power4.easeOut, onComplete:function(){ //효과진행
-				_this.keyEnable(_this.indexNum); //보조기기, 키보드 접근성
-				var id = $eleModule.attr('id');
-				$(_this.eleOpener+'[aria-controls='+id+']').focus();
-				$eleModule.hide().removeClass(_this.clsVisible).removeAttr('style'); //비활성 적용
-			}});
-
-			//Document UI
-			dimmer.close('dimmer-popup', _this.duration); //딤 닫기 (배경 보이기)
-			bodyScroll.static(); //배경스크롤 해제
-		},
-		keyDisable : function(idx){
-			//보조기기, 키보드 접근제한 설정
-			$(this.eleModule + '[data-index='+idx+']').siblings().attr({'aria-hidden':'true'}).addClass('is-ariaHidden'); // 보조기기 접근제한
-			$(this.eleModule + '[data-index='+idx+']').siblings().find(this.eleTabIdx).not('[tabindex=0]').attr({'tabindex':'-1'}).addClass('not-tabindex'); // 기본요소 키보드 접근제한 (클래스로 설정표시)
-			$(this.eleModule + '[data-index='+idx+']').siblings().find('[tabindex=0]').attr({'tabindex':'-1'}).addClass('is-tabindex'); // 탭인덱스 키보드 접근제한 (클래스로 설정표시)
-		},
-		keyEnable : function(idx){
-			//활성화된 모달이 없는경우 전체 초기화
-			if (this.indexNum == 0){
-				$('.is-ariaHidden').attr({'aria-hidden':'false'}).removeClass('is-ariaHidden'); //보조기기 접근해제
-				$('.not-tabindex').removeAttr('tabindex').removeClass('not-tabindex'); //탭인덱스 없었던 요소 접근해제
-				$('.is-tabindex').attr('tabindex', '0').removeClass('is-tabindex');   //탭인덱스 0이었던 요소 접근해제
-			}
-			//활성화된 모달이 남은경우 초기화
-			else {
-				$(this.eleModule + '[data-index='+idx+']').attr({'aria-hidden':'false'});
-				$(this.eleModule + '[data-index='+idx+']').find('.not-tabindex').removeAttr('tabindex'); //탭인덱스 없었던 요소 접근해제
-				$(this.eleModule + '[data-index='+idx+']').find('.is-tabindex').attr('tabindex', '0');   //탭인덱스 0이었던 요소 접근해제
-			}
+			var $id = $('#' + id);
+			var $opner = $('[data-popup=' + id + ']');
+			$id.removeClass('is-active');
+			$id.one(transitionend, function () {
+				if (!$(this).hasClass('is-active')) {
+					$id.attr('hidden', 'hidden');
+					$opner.focus().removeAttr('data-popup');
+					if (callback) { callback }
+				}
+			});
+			dimmer.close($id, 'dimmer-popup');
+			return 'Popup Closed';
 		},
 	},
 
@@ -601,6 +546,25 @@ var ui = {
 
 $(document).ready(function(){
 
-
+	// GNB 마우스 이벤트
+	$(".node1-wrap > li").bind('mouseenter mouseleave click', function (e) {
+		var winWidth = $(window).width();
+		if (e.type === 'mouseenter') {
+			if (winWidth > 940) {
+				$(".node1-wrap > li").removeClass('on');
+				$(this).addClass('on');
+				$(".node1-wrap > li > div.node2-wrap").fadeOut(1);
+				if ($(this).find('div.node2-wrap').length > 0) {
+					$(this).find('div.node2-wrap').stop(true, false).fadeIn(1);
+				}
+			}
+		}
+		if (e.type === 'mouseleave') {
+			if (winWidth > 940) {
+				$(".node1-wrap > li").removeClass('on');
+				$(".node1-wrap > li > div.node2-wrap").stop(true, false).fadeOut(1);
+			}
+		}
+	});
 	
 });
