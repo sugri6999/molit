@@ -713,7 +713,7 @@ button::-moz-focus-inner {border:0px; padding:0px}
 .tab-basic .is-active a {background:#0089b3; color:#fff}
 /* Design Type1 */
 .tab-type1 a {color:#777}
-.tab-type1 a:before {content:''; display:inline-block; position:absolute; left:50%; bottom:0; width:0; height:2px; background-color:#0089b3; -ms-transform:translate(-50%, 0); transform:translate(-50%, 0); -webkit-transform:translate(-50%, 0)}
+.tab-type1 a:before {content:''; display:inline-block; position:absolute; left:50%; bottom:-1px; width:0; height:2px; background-color:#0089b3; -ms-transform:translate(-50%, 0); transform:translate(-50%, 0); -webkit-transform:translate(-50%, 0)}
 .tab-type1 .is-active a {color:#0089b3}
 .tab-type1 a:hover:before,
 .tab-type1 a:focus:before,

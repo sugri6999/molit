@@ -13,20 +13,6 @@
 </head>
 <body>
     <!-- Layer-Banner -->
-    <!-- <div id="layerBanner" class="popup-wrap is-active" data-popup="banner" role="dialog">
-        <div class="popup popup-basic">
-            <div class="popup-inner">
-                <div class="popup-head">
-                    <h3 class="popup-title popup-focus">청약서류 전달정보 입력</h3>
-                    <button type="button" class="btn-ico popup-close" onclick="ui.popup.close('layerBanner')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
-                </div>
-                <div class="popup-body">
-                    <p class="title_disc">청약서류(청약서 및 약관 등) 전달을 위한 <br>연락처를 입력해 주세요.</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div id="layerBanner" class="layer_popup popup-wrap is-active" data-popup="banner" role="dialog">
         <div class="popup layer_popup_inner">
             <div class="cs_banner">
@@ -55,7 +41,7 @@
                     <input type="checkbox" id="idChk" />
                     <label for="idChk"><span>오늘하루 그만보기</span></label>
                 </span>
-                <button type="button" class="btn_closd" onclick="ui.popup.close('layerBanner')"><i class="ico ico_close"></i></button>
+                <button type="button" class="btn_closd" onclick="ui.popup.close('layerBanner')"><i class="ico ico_close"></i><span class="blind">검색</span></button>
             </div>
         </div>
     </div>
@@ -479,16 +465,19 @@
                 <div class="container">
                     <div class="seach_wrap">
                         <p>기반시설의 <span>제도이행 및 체계적인 구축 및 운영을 위한 업무지원</span>을 목표로 함께하겠습니다.</p>
-                        <div class="total_sch"><input type="text" id="" value="" class="form-text" /></div>
+                        <div class="total_sch">
+                            <input type="text" id="" value="" class="form-text" placeholder="검색어를 입력해주세요." />
+                            <button type="button"><i class="ico big_search"></i><span class="blind">검색</span></button>
+                        </div>
                     </div>
                     <div class="banner_wrap">
-                        <h3></h3>
+                        <h3>인프라 총조사 권역별 설명회</h3>
                         <ul>
                             <li>기간 : 2023년 6월 22일 ~ 7월 9일</li>
-                            <li>내용 :
+                            <li class="word_braek">내용 :
                                 <ol>
                                     <li><em>1.</em> 기반시설 관리법 제도</li>
-                                    <li><em>2.</em> 인프라 총조사 소개 및 실행계획 현행화</li>
+                                    <li><em>2.</em> 인프라 총조사 소개 및 <br>실행계획 현행화</li>
                                     <li><em>3.</em> 유지관리 정보조사 작성 매뉴얼</li>
                                     <li><em>4.</em> 기반터시스템 발표자료</li>
                                 </ol>
@@ -496,104 +485,317 @@
                         </ul>
                     </div>
                     <div class="mypage_wrap">
-                        <div class="">
-                            <figure></figure>
-                            <p>반갑습니다. <br>국토교통부 <br>시설안전과 님</p>
+                        <div class="user">
+                            <figure><img src="../images/main/circle-user-solid1.svg" alt="" /></figure>
+                            <p>반갑습니다. <br>국토교통부 <br><span>시설안전과</span> 님</p>
                         </div>
-                        <p>마지막 접속일 : 2023.08.24</p>
-                        <div>
+                        <p class="last_date">마지막 접속일 : 2023.08.24</p>
+                        <div class="button_set">
                             <button type="button"><span>MY PAGE</span></button>
-                            <button type="button"><span>미확인 알리 <em>3</em>건</span></button>
+                            <button type="button"><span>미확인 알림 <em>3</em>건</span></button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card_basic">
-                <div class="title_qmenu">
-                    <p>QUICK MENU</p>
-                    <span>자주찾는 메뉴 바로가기</span>
+            <div class="container section_wrap">
+                <div class="card_basic guick_menu_wrap">
+                    <div class="title_qmenu">
+                        <p>QUICK MENU</p>
+                        <span>자주찾는 메뉴 바로가기</span>
+                    </div>
+                    <div class="qmeu_01">
+                        <ul>
+                            <li onclick="">
+                                <figure class="banner01_1"></figure>
+                                <span>관리자</span>
+                            </li>
+                            <li>
+                                <figure class="banner01_2"></figure>
+                                <span>관리감독기관</span>
+                            </li>
+                            <li>
+                                <figure class="banner01_3"></figure>
+                                <span>주문관청 등</span>
+                            </li>
+                            <li>
+                                <figure class="banner01_4"></figure>
+                                <span>관리주체</span>
+                            </li>
+                            <li>
+                                <figure class="banner01_5"></figure>
+                                <span>관리주체 하위</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="qmeu_02">
+                        <ul>
+                            <li>
+                                <figure class="banner02_1"></figure>
+                                <span>시설현황</span>
+                            </li>
+                            <li>
+                                <figure class="banner02_2"></figure>
+                                <span>기준관리</span>
+                            </li>
+                            <li>
+                                <figure class="banner02_3"></figure>
+                                <span>통계현황</span>
+                            </li>
+                            <li>
+                                <figure class="banner02_4"></figure>
+                                <span>재정관리</span>
+                            </li>
+                            <li>
+                                <figure class="banner02_5"></figure>
+                                <span>지원사업</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="qmeu_01">
-                    <ul>
-                        <li>
-                            <figure></figure>
-                            <span>관리자</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>관리감독기관</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>주문관청 등</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>관리주체</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>관리주체 하위</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="qmeu_02">
-                    <ul>
-                        <li>
-                            <figure></figure>
-                            <span>시설현황</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>기준관리</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>통계현황</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>재정관리</span>
-                        </li>
-                        <li>
-                            <figure></figure>
-                            <span>지원사업</span>
-                        </li>
-                    </ul>
+
+                <div class="section_body">
+                    <div class="set col-2">
+                        <div class="card_default news_wrap">
+                            <div class="news_header">
+                                <h3>What's News</h3>
+                                <a href=""><span>더보기</span> <i class="ico ico_circle_plus"></i></a>
+                            </div>
+                            <div class="tab-wrap">
+                                <div class="tab-nav tab-type1 tab-transition tab-flexible">
+                                    <ul role="tablist">
+                                        <li role="presentation" class="is-active">
+                                            <a href="#tabContent01" role="tab" aria-controls="tabContent01" aria-selected="true" aria-expanded="true">공지사항</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#tabContent02" role="tab" aria-controls="tabContent02" aria-selected="false" aria-expanded="false">자료실</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#tabContent03" role="tab" aria-controls="tabContent03" aria-selected="false" aria-expanded="false">FAQ</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#tabContent04" role="tab" aria-controls="tabContent04" aria-selected="false" aria-expanded="false">Q&A</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-body">
+                                    <div id="tabContent01" class="tab-content is-active" aria-hidden="false">
+                                        <div class="tab-inner board_wrap">
+                                            <div class="list_header">
+                                                <div class="circle_box">
+                                                    2023.01 <p>23</p>
+                                                </div>
+                                                <div class="board_title">
+                                                    <p>[실행계획] 관련 대표ID 담당자 지정완료 안내 및 담당자 변경 밥법</p>
+                                                    <span>실행계획 관련 대표id(관리감독기관, 대표관리주체)가 공문으로 완료되어 지정이 되었음을 '기반시설 관리실행계획 수립 매뉴얼' 배포 공지드립니다.</span>
+                                                </div>
+                                            </div>
+                                            <ul class="list_body">
+                                                <li>
+                                                    <a href="">[실행계획] '기반시설 관리실행계획 수립 매뉴얼' 배포</a>
+                                                    <em>2023.01.18</em>
+                                                </li>
+                                                <li>
+                                                    <a href="">[실행계획] '기반시설 관리실행계획 수립 매뉴얼' 배포</a>
+                                                    <em>2023.01.18</em>
+                                                </li>
+                                                <li>
+                                                    <a href="">[실행계획] '기반시설 관리실행계획 수립 매뉴얼' 배포</a>
+                                                    <em>2023.01.18</em>
+                                                </li>
+                                                <li>
+                                                    <a href="">[실행계획] '기반시설 관리실행계획 수립 매뉴얼' 배포</a>
+                                                    <em>2023.01.18</em>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div id="tabContent02" class="tab-content" aria-hidden="true">
+                                        <div class="tab-inner">
+                                            222
+                                        </div>
+                                    </div>
+                                    <div id="tabContent03" class="tab-content" aria-hidden="true">
+                                        <div class="tab-inner">
+                                            333
+                                        </div>
+                                    </div>
+                                    <div id="tabContent04" class="tab-content" aria-hidden="true">
+                                        <div class="tab-inner">
+                                            444
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_default item news_wrap">
+                            <div class="news_header">
+                                <h3>MY Page</h3>
+                                <div class="controls">
+                                    <section id="pager" style="display:none;">
+                                        <span class="dots on" onclick="currentSlide(1)"></span>
+                                        <span class="dots" onclick="currentSlide(2)"></span>
+                                        <span class="dots" onclick="currentSlide(3)"></span>
+                                        <span class="dots" onclick="currentSlide(4)"></span>
+                                        <span class="dots" onclick="currentSlide(5)"></span>
+                                    </section><!--pager }-->
+                                    <div class="arrow prev" onclick="prevNext(-1)"><img src="../images/common/arws_bd_prev.png" alt=""></div>
+                                
+                                    <div class="slideNum">
+                                        <span id="thisSlide">0</span> / <span id="allSlide">0</span>
+                                    </div>
+                                    <div class="stoplay">
+                                        <button class="slideStopStart" onclick="showSlides()">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path style="fill: #fff;"
+                                                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                                            </svg>
+                                        </button>
+                                        <button class="slideStopStart" onclick="stopSlide()"><img src="../images/common/pause-solid.svg" alt=""></button>
+                                    </div>
+                                    <div class="arrow next" onclick="prevNext(1)"><img src="../images/common/arws_bd_next.png" alt=""></div>
+                                </div> <!--pager -->
+                            </div>
+                            <div class="news_body">
+                                <div class="slides_body">
+                                    <div class="slides">
+                                        <dl>
+                                            <dd>
+                                                <p>관련업무사항</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="">담당 주무관청등의 실행계획이 등록되었습니다.</a>
+                                                        <em>2023.01.18</em>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">담당 주무관청등의 실행계획이 등록되었습니다.</a>
+                                                        <em>2023.01.18</em>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <dd>
+                                                <p>관련권한사항</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="">담당 주무관청등의 실행계획이 등록되었습니다.</a>
+                                                        <em>2023.01.18</em>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">담당 주무관청등의 실행계획이 등록되었습니다.</a>
+                                                        <em>2023.01.18</em>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="slides">
+                                        <img src="../images/content/01.jpg" alt="">
+                                    </div>
+                                    <div class="slides">
+                                        <img src="../images/content/02.jpg" alt="">
+                                    </div>
+                                    <div class="slides">
+                                        <img src="../images/content/03.jpg" alt="">
+                                    </div>
+                                    <div class="slides">
+                                        <img src="../images/content/04.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="set col_2_1">
+                        <div class="card_default">
+                            <div class="card_header">
+                                <h5>기반시설 개소수 현황</h5>
+                            </div>
+                            <div class="card_body">
+                                <p>챠트삽입</p>
+                            </div>
+                        </div>
+                        <div class="card_default">
+                            <div class="card_header">
+                                <h5>기반시설 연장 현황</h5>
+                            </div>
+                            <div class="card_body">
+                                <p>챠트삽입</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="set col_3">
+                        <div class="card_default">
+                            <div class="card_header">
+                                <h5>기반시설 연장 현황</h5>
+                            </div>
+                            <div class="card_body">
+                                <p>챠트삽입</p>
+                            </div>
+                        </div>
+                        <div class="card_default">
+                            <div class="card_header">
+                                <h5>기반시설 연장 현황</h5>
+                            </div>
+                            <div class="card_body">
+                                <p>챠트삽입</p>
+                            </div>
+                        </div>
+                        <div class="card_default">
+                            <div class="card_header">
+                                <h5>기반시설 연장 현황</h5>
+                            </div>
+                            <div class="card_body">
+                                <p>챠트삽입</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="section_wrap">
-                <div class="set">
-                    <div class="item news_wrap">
-                        <div class="tab-wrap">
-                            <div class="tab-nav tab-basic tab-flexible">
-                                <ul role="tablist">
-                                    <li role="presentation" class="is-active">
-                                        <a href="#tabContent01" role="tab" aria-controls="tabContent01" aria-selected="true" aria-expanded="true">증권</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#tabContent02" role="tab" aria-controls="tabContent02" aria-selected="false" aria-expanded="false">영수증</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-body">
-                                <div id="tabContent01" class="tab-content is-active" aria-hidden="false">
-                                    <div class="tab-inner">
-                                        111
-                                    </div>
-                                </div>
-                                <div id="tabContent02" class="tab-content" aria-hidden="true">
-                                    <div class="tab-inner">
-                                        222
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="site_link">
+                <div class="container">
+                    <div class="site_set">
+                        <h3>유관기관 시스템</h3>
+                        <ul>
+                            <li>
+                                <a href="">국토교통부</a>
+                            </li>
+                            <li>
+                                <a href="">국가법령정보센터</a>
+                            </li>
+                            <li>
+                                <a href="">관리주체</a>
+                            </li>
+                            <li>
+                                <a href="">국토안전관리원</a>
+                            </li>
+                            <li>
+                                <a href="">관리감독기관</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="site_set">
+                        <h3>연계 시스템</h3>
+                        <ul>
+                            <li>
+                                <a href="">국토교통부</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="site_set">
+                        <h3>유관시설 시스템</h3>
+                        <ul>
+                            <li>
+                                <a href="">시설문 통합정보 관리시스템<br>(FMS)</a>
+                            </li>
+                            <li>
+                                <a href="">유지보수공사실적 신고시스템<br>(KISCON)</a>
+                            </li>
+                            <li>
+                                <a href="">교량 및 터널 통합관리시스템<br>(BMS)</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="set"></div>
-                <div class="set"></div>
             </div>
         </article>
     </section>
@@ -604,7 +806,7 @@
                 <ul class="depth1">
                     <li class="has-depth1"><a href="">시스템 소개</a></li>
                     <li class="has-depth1"><a href="">이용약관</a></li>
-                    <li class="has-depth1"><a href=""><span style="font-weight: bold;">개인정보처리방침</span></a></li>
+                    <li class="has-depth1"><a href="">개인정보처리방침</a></li>
                     <li class="has-depth1"><a href="">공공데이터 이용정책</a></li>
                     
                 </ul>
@@ -620,5 +822,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/slide.js"></script>
 </body>
 </html>

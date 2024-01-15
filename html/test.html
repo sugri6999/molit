@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>기반터</title>
+    <link type="text/css" rel="stylesheet" href="../css/import.css" />
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <script src="../js/import.js"></script>
+
+    <style>
+        carousel-1 > .owl-carousel > .owl-stage-outer > .owl-stage > .owl-item > .item {
+    height:600px;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav {
+    margin:0 !important;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav > div {
+    padding:0;
+    margin:0 20px;
+    border-radius:0;
+    background-color:transparent;
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    font-size:4rem;
+}
+
+.carousel-1 > .owl-carousel > .owl-nav > div.owl-next {
+    left:auto;
+    right:0;
+}
+
+.carousel-1 > .owl-carousel > .owl-dots {
+    padding:0;
+    margin:20px 0 0 0;
+}
+
+.carousel-1[data-carousel-1-autoplay-status="Y"] .play {
+    display:none;
+}
+
+.carousel-1[data-carousel-1-autoplay-status="N"] .stop {
+    display:none;
+}
+    </style>
+
+<!-- owl 캐러셀 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+</head>
+<body>
+    <div class="carousel-1" data-carousel-1-autoplay-status="Y">
+    <ul class="owl-carousel owl-theme">
+        <li class="item" style="background-image:url(https://kopimages.kolon.com/cms/banner/2018/10/main_pc-f756e994-943e-449b-95e6-229545eb1ad9.jpg);"></li>
+        <li class="item" style="background-image:url(https://kopimages.kolon.com/cms/banner/2018/09/main_pc3-f4d54f2a-16b6-4055-96d8-d271959d38dd.jpg);"></li>
+    </ul>
+    <div class="play">시작</div>
+    <div class="stop">정지</div>
+</div>
+
+
+
+</body>
+
+<script>
+    function Carousel1__onTranslated() {
+            $('.carousel-1 > .owl-carousel').trigger('play.owl.autoplay');
+
+            $('.carousel-1').attr('data-carousel-1-autoplay-status', 'Y');
+        }
+
+        $('.carousel-1 > .owl-carousel').owlCarousel({
+            autoplay: true, // 오토 플레이
+            autoplayTimeout: 4000, // 오토 플레이 시에 다음 슬라이드로 넘어가는 주기, 2초
+            loop: true, // 끝에서 다시 처음으로 시작
+            margin: 0,
+            nav: true,
+            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                }
+            },
+            autoplayHoverPause: false, /* 필수 */
+            onTranslated: Carousel1__onTranslated,
+        });
+
+        $('.carousel-1 .play').on('click', function () {
+            $('.carousel-1 > .owl-carousel').trigger('play.owl.autoplay');
+
+            $('.carousel-1').attr('data-carousel-1-autoplay-status', 'Y');
+        });
+
+        $('.carousel-1 .stop').on('click', function () {
+            $('.carousel-1 > .owl-carousel').trigger('stop.owl.autoplay');
+
+            $('.carousel-1').attr('data-carousel-1-autoplay-status', 'N');
+        });
+</script>
+</html>

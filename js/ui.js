@@ -566,5 +566,29 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$('.center').slick({
+		slide: 'div',        //슬라이드될 태그
+		infinite: true,
+		slidesToShow: 1,        // 한 화면에 보여질 컨텐츠 개수
+		slidesToScroll: 1,        //스크롤 한번에 움직일 컨텐츠 개수
+		// dots: true,
+		autoplay: true,            // 자동 스크롤 사용 여부
+		autoplaySpeed: 5000,         // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+		speed: 500,
+		prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
+		nextArrow: "<button type='button' class='slick-next'>Next</button>",
+		draggable: true,     //드래그 가능 여부
+		slidesPerRow: 2, //요소 안에 볼 슬라이드 갯수
+	});
+
+	
+
+
+
 	
 });
+
+
+
+

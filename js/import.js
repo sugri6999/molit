@@ -9,6 +9,7 @@ document.write('<script type="text/javascript" src="'+baseURL+'ui.js"></script>'
 document.write('<script type="text/javascript" src="'+baseURL+'custom_ui.js"></script>');
 document.write('<script type="text/javascript" src="'+baseURL+'content.js"></script>');
 document.write('<script type="text/javascript" src="'+baseURL+'slick.js"></script>');
+document.write('<script type="text/javascript" src="'+baseURL+'slide.js"></script>');
 document.write('<script type="text/javascript" src="'+baseURL+'init.js"></script>');
 document.write('<!--[if lt IE 9]>');
 document.write('<script type="text/javascript" src="'+baseURL+'lib/html5shiv-printshiv.js"></script>');
