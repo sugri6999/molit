@@ -15,6 +15,7 @@
 @import url('common.css');				/* 전역 공통 스타일 */
 @import url('layout.css');				/* 레이아웃 스타일 */
 @import url('ui.css');					/* 공통형태 스타일 */
+@import url('slick.css');					/* 공통형태 스타일 */
 @import url('lib/animate.css');			/* 애니메이트 스타일 */
 @import url('lib/plugin.css');			/* 플러그인 스타일 */
 @import url('lib/axicon.css');			/* 텍스트아이콘 스타일 */

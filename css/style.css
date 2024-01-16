@@ -499,6 +499,16 @@ section article .section_wrap .section_body .set.col-2 > div .news_header .contr
 section article .section_wrap .section_body .set.col-2 > div .news_header .controls .arrow img {
   width: 10px;
 }
+section article .section_wrap .section_body .set.col-2 > div .news_header .controls .stoplay {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 2px;
+}
+section article .section_wrap .section_body .set.col-2 > div .news_header .controls .stoplay button {
+  width: 12px;
+  height: 20px;
+}
 section article .section_wrap .section_body .set.col-2 > div .news_body {
   position: relative;
 }
@@ -798,6 +808,22 @@ section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner .cs_info
 }
 section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner .cs_info p {
   color: #7f7f7f;
+}
+section article.login .sub_wrap .inner .slick-slider.autoplay {
+  padding-bottom: 20px;
+}
+section article.login .sub_wrap .inner .slick-slider.autoplay h3 {
+  text-align: center;
+  line-height: 80px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+section article.login .sub_wrap .inner .slick-slider.autoplay .slick-arrow {
+  top: 42%;
+}
+section article.login .sub_wrap .inner .slick-slider.autoplay .slick-list .slick-track {
+  display: flex;
+  gap: 10px;
 }
 section article .site_link {
   padding: 26px 0;

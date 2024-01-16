@@ -219,6 +219,10 @@ section {
                                         width:20px; text-align:center;
                                         img {width:10px}
                                     }
+                                    .stoplay {
+                                        display:flex; align-items:center; gap:10px; padding-bottom:2px;
+                                        button {width:12px; height:20px}
+                                    }
                                 }
                             }
                             .news_body {
@@ -371,6 +375,15 @@ section {
                                 }
                             }
                         }               
+                    }
+
+                    .slick-slider {
+                        &.autoplay {
+                            padding-bottom:20px;
+                            h3 {text-align: center; line-height:80px; background-color: #fff; border:1px solid #ccc;}
+                            .slick-arrow {top:42%}
+                            .slick-list .slick-track {display:flex; gap: 10px;}
+                        }
                     }
                 }
             }
