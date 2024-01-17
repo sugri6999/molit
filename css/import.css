@@ -19,3 +19,5 @@
 @import url('lib/animate.css');			/* 애니메이트 스타일 */
 @import url('lib/plugin.css');			/* 플러그인 스타일 */
 @import url('lib/axicon.css');			/* 텍스트아이콘 스타일 */
+@import url('lib/slick.css');			/* Slick 슬아이드 스타일 */
+@import url('lib/slick-theme.css');		/* Slick 슬아이드 스타일 */

@@ -567,19 +567,20 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.center').slick({
-		slide: 'div',        //슬라이드될 태그
-		infinite: true,
-		slidesToShow: 1,        // 한 화면에 보여질 컨텐츠 개수
-		slidesToScroll: 1,        //스크롤 한번에 움직일 컨텐츠 개수
+	// 롤링배너_로그인
+	$('.autoplay').slick({
+		slide: 'div',
+		infinite : true,   
+		slidesToShow : 6,
+		slidesToScroll : 1,
 		// dots: true,
-		autoplay: true,            // 자동 스크롤 사용 여부
-		autoplaySpeed: 5000,         // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
-		speed: 500,
-		prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
-		nextArrow: "<button type='button' class='slick-next'>Next</button>",
-		draggable: true,     //드래그 가능 여부
-		slidesPerRow: 2, //요소 안에 볼 슬라이드 갯수
+		speed : 600,
+		autoplay : true,
+		autoplaySpeed: 2000,
+		arrows : true,
+		pauseOnHover : true,
+		prevArrow : "<button type='button' class='slick-prev'>이전</button>",
+		nextArrow : "<button type='button' class='slick-next'>Next</button>",
 	});
 
 	
