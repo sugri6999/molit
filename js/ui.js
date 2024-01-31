@@ -586,9 +586,34 @@ $(document).ready(function(){
 	
 
 
+	$(".drop button").hover(function () {
+		$(this).children(".drop-content").stop().slideToggle(500);
+	});
 
 	
 });
+
+
+function myFunction1() {
+	document.getElementById("dropdownMenu1").classList.toggle("is-active");
+}
+function myFunction2() {
+	document.getElementById("dropdownMenu2").classList.toggle("is-active");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+	if (!event.target.matches('.dropdown-toggle')) {
+		var dropdowns = document.getElementsByClassName("dropdown");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('is-active')) {
+				openDropdown.classList.remove('is-active');
+			}
+		}
+	}
+}
 
 
 

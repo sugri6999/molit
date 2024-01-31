@@ -236,6 +236,13 @@ header .header__top .gnb_wrap .logo {
   height: 50px;
   padding-top: 0;
 }
+header .header__top .gnb_wrap .btn_unb {
+  background: #7FA8DC;
+  line-height: 32px;
+  padding: 4px 20px;
+  border-radius: 6px;
+  color: #fff;
+}
 
 section {
   background-color: #F3F2F7;
@@ -731,7 +738,7 @@ section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .log
   background-color: #D5ECF1;
   border-radius: 16px;
   height: 32px;
-  padding: 0 20px;
+  padding: 3px 20px 0px;
 }
 section article.login .sub_wrap .inner .sub_section .login_area .login_wrap .login_inner .login_notice {
   border: 1px solid #e0e0e0;
@@ -783,9 +790,11 @@ section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_btn button {
   max-width: 270px;
   line-height: normal;
   min-height: 45px;
-  padding: 0;
+  padding: 2px 0 0;
   border-radius: 22px;
   background-color: #999;
+}
+section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_btn button span {
   color: #fff;
 }
 section article.login .sub_wrap .inner .sub_section .cs_wrap .cs_banner {
@@ -852,13 +861,13 @@ section article .site_link > div .site_set h3 {
   color: #fff;
   margin-bottom: 18px;
 }
-section article .site_link > div .site_set ul {
+section article .site_link > div .site_set > ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
-section article .site_link > div .site_set ul li {
+section article .site_link > div .site_set > ul > li {
   width: 185px;
   display: flex;
   justify-content: center;
@@ -866,10 +875,41 @@ section article .site_link > div .site_set ul li {
   align-items: center;
   background: #2D3040;
 }
-section article .site_link > div .site_set ul a {
+section article .site_link > div .site_set > ul > li > a {
   padding-top: 4px;
   color: rgba(255, 255, 255, 0.45);
   text-align: center;
+}
+section article .site_link > div .site_set > ul > li .dropdown-basic .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.45);
+}
+section article .site_link > div .site_set > ul > li .dropdown-basic .dropdown.is-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 0;
+  bottom: 35px;
+  left: -17px;
+  right: -17px;
+  width: auto;
+  border-radius: 0;
+  background-color: #2D3040;
+  border-color: #191a24;
+}
+section article .site_link > div .site_set > ul > li .dropdown-basic .dropdown.is-active a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  color: #fff;
+}
+section article .site_link > div .site_set > ul > li .dropdown-basic .dropdown.is-active a + a {
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+}
+section article .site_link > div .site_set > ul > li .dropdown-basic .dropdown.is-active a:hover {
+  background-color: #000;
 }
 
 .footer .footer__contents .container {

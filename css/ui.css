@@ -848,6 +848,7 @@ button::-moz-focus-inner {border:0px; padding:0px}
 .dropdown-basic .dropdown-toggle.is-active {border-radius:3px 3px 0 0}
 .dropdown-basic .dropdown {padding:5px 10px; border:1px solid #ddd; background-color:#fff; border-radius:0 0 3px 3px; line-height:24px; outline:0}
 
+
 /*-------------------------------------------------------------------
 	##Modal
 -------------------------------------------------------------------*/

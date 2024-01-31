@@ -102,6 +102,12 @@ header {
         .gnb_wrap {
             border-bottom:0 none; display:flex; align-items:center; justify-content:space-between; height:80px;
             .logo {width:220px; height:50px; padding-top:0}
+            .btn_unb {background: #7FA8DC;
+                line-height: 32px;
+                padding: 4px 20px;
+                border-radius: 6px;
+                color: #fff;
+            }
         }
     }
 }
@@ -339,7 +345,7 @@ section {
                                             display:flex; justify-content:flex-end; gap:20px;
                                             li {
                                                 a {font-size:14px; color:#666666}
-                                                button {background-color:#D5ECF1; border-radius:16px; height:32px; padding:0 20px}
+                                                button {background-color:#D5ECF1; border-radius:16px; height:32px; padding:3px 20px 0px}
                                             }
                                         }
                                     }
@@ -363,7 +369,10 @@ section {
                             margin:40px 0 0; min-height:150px; display:flex; justify-content:space-between;
                             .cs_btn {
                                 display:flex; flex-direction:column; gap:10px; width:440px; background:url('../images/sub/man_bg.png') right -20px no-repeat; background-size:180px;
-                                button {max-width:270px; line-height:normal; min-height:45px; padding:0; border-radius:22px; background-color:#999; color:#fff}
+                                button {
+                                    max-width:270px; line-height:normal; min-height:45px; padding:2px 0 0; border-radius:22px; background-color:#999;
+                                    span {color:#fff}
+                                }
                             }
                             .cs_banner {
                                 display:flex; width:500px; justify-content:space-between;
@@ -401,10 +410,25 @@ section {
                         ul li {width:248px; background-color:rgba(255, 255, 255, .10)}
                     } 
                     h3 {font-size:20px; color:#fff; margin-bottom:18px}
-                    ul {
+                    > ul {
                         display:flex; flex-wrap:wrap; align-items:center; gap:10px;
-                        li {width:185px; display:flex; justify-content:center; height:50px; align-items:center; background:#2D3040}
-                            a {padding-top:4px; color:rgba(255, 255, 255, .45); text-align:center;}
+                        > li {
+                            width:185px; display:flex; justify-content:center; height:50px; align-items:center; background:#2D3040;
+                            > a {padding-top:4px; color:rgba(255, 255, 255, .45); text-align:center}
+
+                            .dropdown-basic {
+                                .dropdown-toggle {color:rgba(255, 255, 255, 0.45)}
+                                .dropdown {
+                                    &.is-active {
+                                        display:flex; flex-direction:column; align-items:center; max-height:220px; overflow-y:auto; padding:0; bottom:35px; left: -17px; right:-17px; width:auto; border-radius:0; background-color:#2D3040; border-color:#191a24;
+                                        a {display:block; width:100%; text-align:center; padding:8px 0; color:#fff}
+                                        a + a {border-top:1px solid rgba(255, 255, 255, .065);}
+                                        a:hover {background-color: #000;}
+                                    }
+                                }
+                             }
+                        }
+                        
                     }
                 }
             }
