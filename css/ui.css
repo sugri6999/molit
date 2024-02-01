@@ -266,11 +266,21 @@ button::-moz-focus-inner {border:0px; padding:0px}
 .ico_close {background-image:url('../images/common/xmark-solid1.svg')}
 
 /* Arrow */
-.arw {position:relative; display:inline-block; background:url('../images/common/arw_sprite.png') no-repeat -999em -999em; vertical-align:middle; text-indent:-9999em}
+.arw {position:relative; display:inline-block; /*background:url('../images/common/arw_sprite.png') no-repeat -999em -999em;*/ vertical-align:middle; text-indent:-9999em}
 .arw-fold {display:inline-block; width:8px; height:8px; border-left:2px solid transparent; border-top:2px solid transparent; border-radius:2px 0 0 0; content:''}
 .arw-fold.white {border-left-color:white; border-top-color:white}
 .arw-fold.black {border-left-color:#222; border-top-color:#222}
-.arw-toggle {width:12px; height:8px; background-position:-25px 0}
+.arw-toggle::after {
+    position: absolute;
+    right: 0; 
+    top: -10px; 
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #777;
+    border-right: 2px solid #777;
+    transform: rotate(135deg);
+}
 .arw-toggle.primary {background-position-x:0px}
 .arw-toggle.black {background-position-x:-25px}
 .arw-toggle.white {background-position-x:-50px}
